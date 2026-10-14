@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "project": {
+    "id": "p1",
+    "title": "Thesis proposal",
+    "state": "active",
+    "focus": "m1",
+    "spec": {
+      "goal": "Choose a feasible question",
+      "success_criteria": [
+        "A scoped question"
+      ],
+      "hard_deadline": "2026-11-25",
+      "unknowns": [
+        "Available data"
+      ]
+    },
+    "reminder": {
+      "enabled": false,
+      "mode": "review",
+      "timezone": "Asia/Jakarta",
+      "schedule_id": null,
+      "cancellation_pending": false
+    }
+  },
+  "items": [
+    {
+      "id": "m1",
+      "project_id": "p1",
+      "parent": null,
+      "level": "milestone",
+      "title": "Research direction",
+      "state": "in progress",
+      "criteria": [
+        "Feasible question accepted"
+      ],
+      "met_criteria": [],
+      "dependencies": []
+    },
+    {
+      "id": "t1",
+      "project_id": "p1",
+      "parent": "m1",
+      "level": "task",
+      "title": "Candidate questions",
+      "state": "in progress",
+      "criteria": [
+        "Three questions"
+      ],
+      "met_criteria": [],
+      "dependencies": []
+    },
+    {
+      "id": "a1",
+      "project_id": "p1",
+      "parent": "t1",
+      "level": "action",
+      "title": "Write candidate questions",
+      "state": "ready",
+      "criteria": [
+        "Three questions written"
+      ],
+      "met_criteria": [],
+      "minutes": 10,
+      "dependencies": []
+    }
+  ],
+  "history": [],
+  "occurrences": []
+}

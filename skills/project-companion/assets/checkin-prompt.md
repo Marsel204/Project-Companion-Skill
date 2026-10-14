@@ -1,0 +1,5 @@
+Use the project-companion skill to return to the project at {confirmed Notion project reference}. Read its current specification, focus, progress, reminder policy, and pending operations before deciding what to do.
+
+This is {the user's agreed weekly review or quiet monitoring intent}. Respect the project's active state, timezone, and quiet hours. For an explicitly requested review, provide one useful question or small next action with the project link. For monitoring, remain quiet unless there is a meaningful change, deadline risk, failure, or required user action.
+
+Use the schedule's stable occurrence identity and recorded delivery state. Do not repeat an already delivered check-in; reconcile uncertain delivery rather than sending again blindly. Do not mark project work complete from silence or the passage of time. Preserve the schedule identity if setup or shutdown is only partly successful. Stop project check-ins after pause, completion, or abandonment, and report a failed scheduler shutdown truthfully.

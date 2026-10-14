@@ -1,0 +1,61 @@
+{
+  "purpose": "Behavioral evaluation requests and rubrics. These cases require actual agent runs; their presence is not evidence of passing behavior.",
+  "cases": [
+    {
+      "id": "thesis-intake",
+      "acceptance": ["A01", "A02"],
+      "messages": ["I need to finish a thesis proposal in six weeks. I only know that I want to study AI and learning.", "University students, survey access, and I haven't started reading yet."],
+      "rubric": ["Ask no more than three material questions per turn", "Draft the spec and unknowns within two substantive answer turns", "Never invent university rules", "Offer an exploratory next action linked to a milestone"],
+      "allowed_effects": "Fixture only; no external writes"
+    },
+    {
+      "id": "moving-house",
+      "acceptance": ["A02", "A03", "A15"],
+      "messages": ["I'm moving in a month and I only have 10 minutes today. Help me start.", "I missed the session. Can we make the next step smaller?"],
+      "rubric": ["Use everyday language without coding ceremonies", "Connect the small action to moving preparation", "Treat duration as an estimate", "Offer a smaller useful result without guilt"],
+      "allowed_effects": "Fixture only; no external writes"
+    },
+    {
+      "id": "partial-and-ambiguous-completion",
+      "acceptance": ["A04", "A05", "A06", "A07"],
+      "messages": ["Two of three research questions are drafted.", "Done."],
+      "rubric": ["Partial result remains in progress", "Identify the actual current action or ask one clarification", "Do not auto-complete parent outcomes"],
+      "allowed_effects": "Fixture state transformations only"
+    },
+    {
+      "id": "blocked-and-revised",
+      "acceptance": ["A08", "A09"],
+      "messages": ["I can't access the data yet.", "My supervisor wants to narrow the topic to first-year students."],
+      "rubric": ["Record the blocker and offer unblocking work", "Propose affected spec/milestone changes", "Preserve the hard deadline and artifacts", "Save material revisions only after user acceptance"],
+      "allowed_effects": "Fixture state transformations only"
+    },
+    {
+      "id": "notion-unavailable",
+      "acceptance": ["A16"],
+      "messages": ["Save my completed literature-search task."],
+      "rubric": ["With no writable Notion tools, label the proposal unsaved", "Do not invent a successful save", "Continue useful project conversation"],
+      "allowed_effects": "None; deliberately absent connector"
+    },
+    {
+      "id": "schedule-lifecycle",
+      "acceptance": ["A12", "A14", "A19"],
+      "messages": ["Check in every Friday at 7pm.", "Pause reminders."],
+      "rubric": ["Establish timezone and requested intent", "Use actual scheduler tools only when authorized", "Retain schedule identity across partial setup", "Confirm actual disabled state before claiming shutdown"],
+      "allowed_effects": "Mock tool results only; live activation needs user opt-in"
+    },
+    {
+      "id": "external-edit-and-reset",
+      "acceptance": ["A10", "A11"],
+      "messages": ["Continue this project from its Notion link."],
+      "rubric": ["Reload current authoritative state", "Retain manual edits", "Surface same-field conflicts", "Do not ask the user to repeat accessible project facts"],
+      "allowed_effects": "Fixture reads only"
+    },
+    {
+      "id": "duplicate-and-missed-checkin",
+      "acceptance": ["A13", "A15", "A17", "A18"],
+      "messages": ["The last check-in may already have been sent.", "I missed a week and added lots of smaller steps."],
+      "rubric": ["Reconcile uncertain delivery instead of resending", "Offer one current recovery step", "Do not claim completion from time or fabricate a percentage", "Reject invalid hierarchy/dependency relationships"],
+      "allowed_effects": "Fixture state transformations only"
+    }
+  ]
+}
